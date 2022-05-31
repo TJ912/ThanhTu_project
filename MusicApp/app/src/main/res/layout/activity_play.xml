@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B7A82525"
+    tools:context=".play"
+    android:id="@+id/layout">
+    <com.jgabrielfreitas.core.BlurImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg"
+        android:scaleX="1.5"
+        android:scaleY="2"
+        app:radius="15"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/blurimageview"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imageView"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:src="@color/white"
+        android:layout_centerHorizontal="true"
+        app:civ_border_width="1dp"
+        android:layout_marginTop="50dp"
+        />
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="140dp"
+        android:background="@drawable/outline_pause_black_24dp"
+        android:id="@+id/btn_pause"/>
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/outline_skip_previous_black_24dp"
+        android:layout_below="@id/imageView"
+        android:layout_marginTop="140dp"
+        android:layout_toStartOf="@id/btn_pause"
+        android:layout_marginEnd="40dp"
+        android:id="@+id/btn_previous"/>
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/outline_skip_next_black_24dp"
+        android:layout_below="@id/imageView"
+        android:layout_marginTop="140dp"
+        android:layout_toEndOf="@id/btn_pause"
+        android:layout_marginStart ="40dp"
+        android:id="@+id/btn_next"/>
+    <SeekBar
+        android:layout_width="350dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:id="@+id/seekBar"
+        android:outlineSpotShadowColor="@color/white"
+        android:progress="45"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/seekBar"
+        android:layout_marginBottom="-100dp"
+        android:layout_marginStart="30dp"
+        android:text="1:25"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:id="@+id/tv_timerun"/>
+
+    <TextView
+        android:id="@+id/tv_timeleft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/seekBar"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="-100dp"
+        android:text="-1:25"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:text="Singer - Song name"
+        android:textColor="@color/white"
+        android:layout_below="@id/imageView"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/tv_song"
+        />
+
+
+</RelativeLayout>

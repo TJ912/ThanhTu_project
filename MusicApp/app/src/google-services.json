@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "795926292489",
+    "project_id": "musicane-28025",
+    "storage_bucket": "musicane-28025.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:795926292489:android:62e7fc5c895e9c4ea530d8",
+        "android_client_info": {
+          "package_name": "com.tj.musicane"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "795926292489-bt85a2q3vq19b0qifsk6vlvbu59gehr0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVWjyLeC0iGgwFnkSVv1ycOCpv9NjAUL8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "795926292489-bt85a2q3vq19b0qifsk6vlvbu59gehr0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

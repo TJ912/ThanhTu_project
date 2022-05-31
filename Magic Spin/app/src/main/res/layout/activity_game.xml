@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/chiecnonbg"
+    tools:context=".GameActivity">
+
+    <TextView
+        android:id="@+id/tv_lifecount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="Số mạng còn lại: x"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/result"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/point" />
+
+    <TextView
+        android:id="@+id/point"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_play"
+        android:layout_centerHorizontal="true"
+        android:text="Điểm của bạn: 0"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/chiecnon"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/chiecnon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/chiecnon"
+        android:layout_width="0dp"
+        android:layout_height="472dp"
+        android:layout_centerHorizontal="true"
+        android:paddingStart="20dp"
+
+        android:paddingEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/result"
+        app:srcCompat="@drawable/chiecnonkidieu" />
+
+    <ImageView
+        android:id="@+id/arrow"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:layout_alignTop="@+id/chiecnon"
+
+        android:rotation="0"
+        app:layout_constraintBottom_toBottomOf="@+id/chiecnon"
+        app:layout_constraintEnd_toEndOf="@+id/chiecnon"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/chiecnon"
+        app:layout_constraintTop_toTopOf="@+id/chiecnon"
+        app:layout_constraintVertical_bias="0.403"
+        app:srcCompat="@drawable/arrowred" />
+
+    <Button
+        android:id="@+id/btn_play"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/button_play"
+        android:text="Quay"
+        android:textColor="#EFEF12"
+        app:layout_constraintBottom_toBottomOf="@+id/chiecnon"
+        app:layout_constraintEnd_toEndOf="@+id/chiecnon"
+        app:layout_constraintStart_toStartOf="@+id/chiecnon" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chiecnon"
+        android:layout_centerHorizontal="true"
+        android:text="Thong bao"
+        android:textColor="#FFFF00"
+        android:textSize="20dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/chiecnon"
+        app:layout_constraintTop_toBottomOf="@id/point" />
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cau hoi"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chiecnon" />
+
+    <LinearLayout
+        android:id="@+id/answer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/question" />
+
+    <LinearLayout
+        android:id="@+id/guestplace"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/answer_layout">
+
+        <EditText
+            android:id="@+id/edt_guess"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:hint="Ki tu ban doan"
+            android:maxLength="1"
+            android:paddingStart="10dp"
+            android:textColor="#E8FF00"
+            android:textColorHint="#FFCFCF" />
+
+        <Button
+            android:id="@+id/btn_guess"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#7C4DFF"
+            android:text="Đoán"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btn_guess_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#FF4081"
+            android:text="Đoán hết"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>
